@@ -4,7 +4,7 @@ import * as Components from './Components';
 function RegisterForms() {
     const [signIn, toggle] = React.useState(true);
     return (
-        <div className="flex bg-indigo-500">
+        <div className="flex flex-col sm:flex-row bg-indigo-600">
             <div>
                 <Components.Container className="">
                     <Components.SignUpContainer signinIn={signIn}>
@@ -58,7 +58,7 @@ function RegisterForms() {
                 </Components.Container>
             </div>
             <div className="w-full">
-                <img src="https://images.alphacoders.com/128/thumbbig-1282982.webp" class="w-[100%] h-full 3xl:h-full 3xl:w-full rounded-md shadow-lg " alt="" />
+                <img src="https://images.alphacoders.com/128/thumbbig-1282982.webp" class="w-[80%] h-auto 3xl:h-full 3xl:w-full rounded-md shadow-lg " alt="" />
             </div>
         </div>
     )

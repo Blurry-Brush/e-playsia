@@ -6,11 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
+  RouterProvider,  
 } from "react-router-dom";
-import RegisterForms from './components/RegisterForm';
+import Register from './components/Register';
 
 
 const router = createBrowserRouter([
@@ -19,8 +17,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/login",
-    element: <RegisterForms />
+    path: "login/:imgUrl",
+    element: <Register />
   }
 ])
 

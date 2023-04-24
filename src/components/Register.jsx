@@ -2,9 +2,10 @@ import React from "react";
 import RegisterForms from "./RegisterForm";
 const Register = () => {
     return (
-        <section className="w-full">
-
-            <div className="h-full w-full bg-indigo-500"><RegisterForms className="" /></div>
+        <section className="h-[100vh] bg-indigo-600">
+            <div className=" bg-indigo-600">
+            <RegisterForms className="" />
+            </div>
 
         </section>
     )

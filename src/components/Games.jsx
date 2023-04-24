@@ -1,6 +1,5 @@
 import React from 'react'
 import GamesCard from './GamesCard'
-import { Link } from 'react-router-dom'
 function Games() {
   return (
     <main className='py-12 sm:px-32 w-full bg-indigo-600'>
@@ -10,10 +9,9 @@ function Games() {
       </div>
       <div className='flex flex-wrap gap-2 md:gap-3'>
 
-      <Link to="/login">
+     
 
         <GamesCard title="Valorant" imgUrl="https://images.alphacoders.com/128/thumbbig-1282982.webp" />
-      </Link>
         <GamesCard title="CSGO" imgUrl="https://images4.alphacoders.com/576/thumbbig-576758.webp" />
         <GamesCard title="DOTA 2" imgUrl="https://images2.alphacoders.com/507/thumbbig-507389.webp" />
         <GamesCard title="League of Legends" imgUrl="https://s3-eu-central-1.amazonaws.com/www-staging.esports.com/wp-media-folder-esports-com/app/uploads/2022/02/LoL-Clash-Dates-2022-720x405.jpg" />
