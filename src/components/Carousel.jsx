@@ -9,7 +9,7 @@ function Carousel() {
     <Swiper
       //   spaceBetween={50}
       tag="div"
-      className="w-[32vw]"
+      className="w-[75vw] mt-4 sm:w-[32vw]"
       slidesPerView={1}
       spaceBetween={100}
       autoplay={true}
@@ -21,10 +21,10 @@ function Carousel() {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><div className="w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
-      <SwiperSlide><div className="w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
-      <SwiperSlide><div className="w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
-      <SwiperSlide><div className="w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
+      <SwiperSlide><div className="w-[75vw] sm:w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
+      <SwiperSlide><div className="w-[75vw] sm:w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
+      <SwiperSlide><div className="w-[75vw] sm:w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
+      <SwiperSlide><div className="w-[75vw] sm:w-[32vw] h-auto"><img className="rounded-2xl" src="https://images.alphacoders.com/128/thumbbig-1282982.webp" alt="" /></div></SwiperSlide>
     </Swiper>
   );
 }
