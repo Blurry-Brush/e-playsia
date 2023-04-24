@@ -1,7 +1,8 @@
+import Footer from "./components/Footer";
 import Games from "./components/Games";
 import Hero from "./components/Hero";
 import LogoBar from "./components/LogoBar";
-import Register from "./components/Register";
+
 
 
 
@@ -12,6 +13,7 @@ function App() {
       <LogoBar />
       <Hero />
       <Games />
+      <Footer />
     </div>
   );
 }

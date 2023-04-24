@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function GamesCard(props) {
   return (
     <Link to={`login/${props.title}`}>
-      <div class="!z-5 mt-4 relative flex flex-col scale-110 rounded-[20px] max-w-[240px] text-white/90 bg-opacity-40 bg-clip-border hover:scale-105 transition-all duration-300 shadow-3xl w-full !p-4 3xl:p-![18px]">
+      <div class="!z-5 mt-4 relative flex flex-col scale-110 rounded-[20px] max-w-[240px] text-white/90 bg-opacity-40 bg-clip-border hover:scale-[115%] transition-all duration-300 shadow-3xl w-full !p-4 3xl:p-![18px]">
         <div class="h-full w-full">
           <div class="relative w-full h-40">
             <img

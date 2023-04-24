@@ -10,6 +10,7 @@ overflow: hidden;
  width: 960px;
 
 min-height: 400px;
+border-radius: 20px;
 `;
 
 export const SignUpContainer = styled.div`
