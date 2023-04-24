@@ -10,7 +10,6 @@ function App() {
     <div>
       <Hero />
       <Games />
-      <Register />
     </div>
   );
 }

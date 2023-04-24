@@ -4,7 +4,7 @@ const Register = () => {
     return (
         <section className="w-full">
 
-            <div className=""><RegisterForms className="w-[120%] border-2 !border-black" /></div>
+            <div className="h-full w-full bg-indigo-500"><RegisterForms className="" /></div>
 
         </section>
     )

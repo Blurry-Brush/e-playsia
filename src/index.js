@@ -10,12 +10,17 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import RegisterForms from './components/RegisterForm';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/login",
+    element: <RegisterForms />
   }
 ])
 
