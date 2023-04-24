@@ -7,6 +7,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/Register';
+import ProfilePage from './components/ProfilePage';
+import Tournaments from './components/TournamentsPage';
+import Community from './components/CommunityPage';
+
 
 
 const router = createBrowserRouter([
@@ -20,7 +24,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <App />
+    element: <ProfilePage />
+  },
+  {
+    path: "/community",
+    element: <Community />
+  },
+  {
+    path: "/tournaments",
+    element: <Tournaments />
   }
 ])
 
