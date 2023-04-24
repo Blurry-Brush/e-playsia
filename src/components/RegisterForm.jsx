@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function RegisterForms() {
     const [signIn, toggle] = React.useState(true);
     return (
-        <div className="flex gap-20 flex-col sm:flex-row bg-indigo-600">
+        <div className="flex gap-20 mb-10 flex-col sm:flex-row bg-indigo-600">
             <div>
                 <Components.Container className="mx-10">
-                    <Components.SignUpContainer signinIn={signIn} className="rounded-md">
+                    <Components.SignUpContainer signinIn={signIn} className="border-2 border-white rounded-md">
                         <Components.Form>
                             <Components.Title>Create Account</Components.Title>
                             <Components.Input type="text" placeholder="UserName" />
@@ -22,7 +22,7 @@ function RegisterForms() {
                         </Components.Form>
                     </Components.SignUpContainer>
 
-                    <Components.SignInContainer signinIn={signIn}>
+                    <Components.SignInContainer signinIn={signIn} className="border-2 border-white">
                         <Components.Form>
                             <Components.Title>Sign in</Components.Title>
                             <Components.Input type="email" placeholder="UserName" />
