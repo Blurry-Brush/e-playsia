@@ -3,7 +3,7 @@ import React from 'react'
 function GamesCard(props) {
     return (
 
-        <div class="!z-5 mt-4 relative flex flex-col rounded-[20px] max-w-[240px] bg-white bg-opacity-10 bg-clip-border hover:scale-105 transition-all duration-300 shadow-3xl w-full !p-4 3xl:p-![18px]">
+        <div class="!z-5 mt-4 relative flex flex-col rounded-[20px] max-w-[240px] bg-white  bg-clip-border hover:scale-105 transition-all duration-300 shadow-3xl w-full !p-4 3xl:p-![18px]">
 
             <div class="h-full w-full">
                 <div class="relative w-full h-32">
