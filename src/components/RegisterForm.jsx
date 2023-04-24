@@ -1,7 +1,55 @@
-import React from "react";
+import React,{useState,useContext} from "react";
 import * as Components from "./Components";
-import { Link } from "react-router-dom";
+import { auth, db } from "../firebase";
+import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
+import { setDoc, doc } from "firebase/firestore";
+
 function RegisterForms() {
+
+    const {signUp,logIn,user} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [confirmPassword,setConfirmPassword] = useState("");
+    const [username,setUsername] = useState("");
+    const [error,setError] = useState("");
+
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        if(user){
+            alert("You are already signed up");
+        }
+        else{
+
+            try {
+                await signUp(email, password);
+                navigate("/");
+                await setDoc(doc(db,"users", email),{
+                    gameUserName: username,
+                })
+              } catch (error) {
+                console.log(error);
+              }
+        }
+    }
+
+    const handleSignIn = async (e) => {
+        e.preventDefault();
+        try {
+            await logIn(email, password);
+            navigate('/');
+            // await setDoc(doc(db,"users", email),{
+            //     gameUserName: username,
+            // })
+          } catch (error) {
+            console.log(error);
+          }
+    }
+
+
     const [signIn, toggle] = React.useState(true);
     return (
         <div className="flex gap-20 mb-10 flex-col sm:flex-row bg-indigo-600">
@@ -10,27 +58,29 @@ function RegisterForms() {
                     <Components.SignUpContainer signinIn={signIn} className="border-2 border-white rounded-md">
                         <Components.Form>
                             <Components.Title>Create Account</Components.Title>
-                            <Components.Input type="text" placeholder="UserName" />
-                            <Components.Input type="email" placeholder="Email" />
-                            <Components.Input type="password" placeholder="Password" />
+                            <Components.Input value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="UserName" />
+                            <Components.Input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
+                            <Components.Input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
                             <Components.Input
                                 type="password"
                                 placeholder="Confirm Password"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
                             />
 
-                            <Link to="/profile"><Components.Button>Sign Up</Components.Button></Link>
+                            <Link to="/profile"><Components.Button onClick={handleSignUp}>Sign Up</Components.Button></Link>
                         </Components.Form>
                     </Components.SignUpContainer>
 
                     <Components.SignInContainer signinIn={signIn} className="border-2 border-white">
                         <Components.Form>
                             <Components.Title>Sign in</Components.Title>
-                            <Components.Input type="email" placeholder="UserName" />
-                            <Components.Input type="password" placeholder="Password" />
+                            <Components.Input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="UserName" />
+                            <Components.Input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
                             <Components.Anchor href="#">
                                 Forgot your password?
                             </Components.Anchor>
-                            <Link to="/profile"><Components.Button>Sign In</Components.Button></Link>
+                            <Link><Components.Button onClick={handleSignIn}>Sign In</Components.Button></Link>
                         </Components.Form>
                     </Components.SignInContainer>
 
