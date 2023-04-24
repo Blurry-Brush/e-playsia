@@ -30,6 +30,9 @@ function Games() {
           imgUrl="https://images7.alphacoders.com/941/thumbbig-941884.webp"
         />
       </div>
+      <div className="  text-orange-500 text-center font-bold p-10 mx-auto text-3xl mt-20">
+        Join the Biggest. Baddest Gaming Community out there!
+      </div>
     </main>
   );
 }

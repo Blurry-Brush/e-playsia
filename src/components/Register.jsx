@@ -5,8 +5,8 @@ const Register = () => {
     return (
         <section className="h-[100vh] bg-indigo-600">
             <LogoBar />
-            <div className=" bg-indigo-600 pt-[20vh]">
-            <RegisterForms className="" />
+            <div className="mt-10 bg-indigo-600">
+                <RegisterForms className="rounded-sm" />
             </div>
 
         </section>

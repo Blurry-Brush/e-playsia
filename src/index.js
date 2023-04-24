@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import {
   createBrowserRouter,
-  RouterProvider,  
+  RouterProvider,
 } from "react-router-dom";
 import Register from './components/Register';
 
@@ -19,13 +19,17 @@ const router = createBrowserRouter([
   {
     path: "login/:imgUrl",
     element: <Register />
+  },
+  {
+    path: "/profile",
+    element: <App />
   }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
