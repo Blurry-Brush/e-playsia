@@ -17,14 +17,14 @@ const data = [
 const COLORS = ["#22c55e", "red"];
 function PieChartWin() {
   return (
-    <div className=" bg-white rounded-xl w-[20vw] flex flex-col justify-center items-center h-[55vh]">
+    <div className="  rounded-xl w-[50vw] flex flex-col justify-center items-center h-[55vh]">
       {/* <h1 className='text-4xl font-bold text-red-600'>Win/Loss</h1> */}
       <PieChart width={250} height={300}>
         <text
           x="50%"
           y="10%"
           dy={+12}
-          style={{ fontSize: 38, fontWeight: "semibold", textColor:"orange"}}
+          style={{ fontSize: 38, fontWeight: "semibold", textColor: "orange" }}
           scaleToFit={true}
           textAnchor="middle"
           verticalAnchor="middle"
