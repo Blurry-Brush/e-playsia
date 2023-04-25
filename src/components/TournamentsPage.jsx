@@ -11,7 +11,11 @@ const Tournaments = () => {
 
 
         <section className="">
-            <Filter className="mx-auto text-center" />
+            <div className="flex flex-row justify-between mb-2 font-bold  text-white">
+                <Filter />
+                {/* <AddEvent /> */}
+                <button className="bg-orange-400 px-5 mr-2 hover:bg-white hover:text-black rounded-md">Add a Event</button>
+            </div>
             <Sidebar />
             <h1 className="text-center text-white text-4xl font-bold mb-10">Our Flagship Events</h1>
             <div className="px-32 justify-center">
