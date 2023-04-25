@@ -2,6 +2,9 @@ import React from "react";
 const Related = () => {
     return (
         <section className=" ">
+            <h1 className="text-4xl text-white mb-4 font-bold">
+                Registered Events
+            </h1>
             <div class="py-8  bg-white bg-opacity-75 rounded-md mb-10 ">
                 <div class="h-full flex gap-4  items-start">
                     <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">

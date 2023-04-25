@@ -7,12 +7,13 @@ import Related from "./RelatedEvents";
 import Filter from "./Filter"
 const Tournaments = () => {
     return <body className="overflow-x-hidden  bg-indigo-600">
-
         <LogoBar />
 
+
         <section className="">
+            <Filter className="mx-auto text-center" />
             <Sidebar />
-            <h1 className="text-center text-white text-3xl font-bold mb-10">Our Flagship Events</h1>
+            <h1 className="text-center text-white text-4xl font-bold mb-10">Our Flagship Events</h1>
             <div className="px-32 justify-center">
 
                 <FlagShip className="mx-auto " />
