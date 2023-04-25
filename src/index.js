@@ -11,7 +11,7 @@ import { AuthContextProvider } from './context/AuthContext';
 import ProfilePage from './components/ProfilePage';
 import Tournaments from './components/TournamentsPage';
 import Community from './components/CommunityPage';
-
+import Organise from "./components/Organise"
 
 
 const router = createBrowserRouter([
@@ -34,6 +34,11 @@ const router = createBrowserRouter([
   {
     path: "/tournaments",
     element: <Tournaments />
+  },
+  {
+    path: "/tournaments/organise",
+    element: <Organise />
+
   }
 ])
 
