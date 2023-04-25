@@ -26,7 +26,7 @@ function RegisterForms() {
 
             try {
                 await signUp(email, password);
-                navigate("/");
+                navigate("/profile");
                 await setDoc(doc(db,"users", email),{
                     gameUserName: username,
                 })
@@ -40,7 +40,7 @@ function RegisterForms() {
         e.preventDefault();
         try {
             await logIn(email, password);
-            navigate('/');
+            navigate('/profile');
             // await setDoc(doc(db,"users", email),{
             //     gameUserName: username,
             // })
